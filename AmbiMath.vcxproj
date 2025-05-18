@@ -129,10 +129,53 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AmbiMath.cpp" />
+    <None Include=".gitattributes" />
+    <None Include=".gitignore" />
+    <None Include="build\AmbiMath\x64\Debug\AmbiMath.chug.recipe" />
+    <None Include="build\AmbiMath\x64\Debug\AmbiMath.ilk" />
+    <None Include="build\AmbiMath\x64\Debug\AmbiMath.tlog\AmbiMath.lastbuildstate" />
+    <None Include="build\AmbiMath\x64\Debug\AmbiMath.tlog\CL.command.1.tlog" />
+    <None Include="build\AmbiMath\x64\Debug\AmbiMath.tlog\Cl.items.tlog" />
+    <None Include="build\AmbiMath\x64\Debug\AmbiMath.tlog\CL.read.1.tlog" />
+    <None Include="build\AmbiMath\x64\Debug\AmbiMath.tlog\CL.write.1.tlog" />
+    <None Include="build\AmbiMath\x64\Debug\AmbiMath.tlog\link.command.1.tlog" />
+    <None Include="build\AmbiMath\x64\Debug\AmbiMath.tlog\link.read.1.tlog" />
+    <None Include="build\AmbiMath\x64\Debug\AmbiMath.tlog\link.secondary.1.tlog" />
+    <None Include="build\AmbiMath\x64\Debug\AmbiMath.tlog\link.write.1.tlog" />
+    <None Include="build\AmbiMath\x64\Debug\vc143.idb" />
+    <None Include="build\AmbiMath\x64\Debug\vc143.pdb" />
+    <None Include="build\x64\Debug\AmbiMath.chug" />
+    <None Include="build\x64\Debug\AmbiMath.exp" />
+    <None Include="build\x64\Debug\AmbiMath.pdb" />
+    <None Include="chuckscript\AmbiMath-test.ck" />
+    <None Include="chuckscript\class_chug_check.ck" />
+    <None Include="LICENSE" />
+    <None Include="makefile" />
+    <None Include="makefile.linux" />
+    <None Include="makefile.mac" />
+    <None Include="makefile.win" />
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AmbiMath.h" />
+    <ClCompile Include="src\AmbiMath.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\AmbiMath.h" />
+    <ClInclude Include="include\chuck_compile.h" />
+    <ClInclude Include="include\chuck_type.h" />
+    <ClInclude Include="include\chugin.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="AmbiMath\x64\Debug\AmbiMath.Build.CppClean.log" />
+    <Text Include="AmbiMath\x64\Debug\AmbiMath.log" />
+    <Text Include="AmbiMath\x64\Debug\AmbiMath.vcxproj.FileListAbsolute.txt" />
+    <Text Include="build\AmbiMath\x64\Debug\AmbiMath.log" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="build\AmbiMath\x64\Debug\AmbiMath.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="build\x64\Debug\AmbiMath.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Targets" />
 </Project>

@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\carpe\\Documents\\build_chugins_here\\AmbiMath.chug\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{32B00A7B-FFF6-2ABC-55E4-9C8F61E1BCEC}|AmbiMath.vcxproj|C:\\Users\\carpe\\Documents\\build_chugins_here\\ambiMath.chug\\src\\AmbiMath.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{32B00A7B-FFF6-2ABC-55E4-9C8F61E1BCEC}|AmbiMath.vcxproj|solutionrelative:src\\AmbiMath.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AmbiMath.cpp",
+              "DocumentMoniker": "C:\\Users\\carpe\\Documents\\build_chugins_here\\AmbiMath.chug\\src\\AmbiMath.cpp",
+              "RelativeDocumentMoniker": "src\\AmbiMath.cpp",
+              "ToolTip": "C:\\Users\\carpe\\Documents\\build_chugins_here\\AmbiMath.chug\\src\\AmbiMath.cpp",
+              "RelativeToolTip": "src\\AmbiMath.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-18T21:01:27.484Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
