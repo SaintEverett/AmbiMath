@@ -3,10 +3,12 @@ A ChucK chugin that acts as a library object to calculate spherical harmonics wi
 
 ## v0.0.1 'Lanquidity'
 > Lanquidity has introduced calculations for the following coordinates:
+
 > // 1st Order.
-> >X.
-> >Y.
-> >Z.
+
+> >X
+> >Y
+> >Z
 > // 2nd Order
 > >R
 > >S
