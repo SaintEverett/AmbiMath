@@ -1,2 +1,59 @@
 ﻿  AmbiMath.cpp
-C:\Users\carpe\Documents\build_chugins_here\ambiMath.chug\src\AmbiMath.cpp(16,10): error C1083: Cannot open include file: 'chugin.h': No such file or directory
+C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_type.h(406,16): error C3646: 'stmt_doc': unknown override specifier
+  (compiling source file 'src/AmbiMath.cpp')
+  
+C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_type.h(406,5): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'src/AmbiMath.cpp')
+  
+C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_type.h(427,28): error C2065: 'stmt_doc': undeclared identifier
+  (compiling source file 'src/AmbiMath.cpp')
+  
+C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_type.h(799,80): error C2039: 'hasStaticDecl': is not a member of 'a_Stmt_'
+  (compiling source file 'src/AmbiMath.cpp')
+      C:\Users\carpe\Documents\build_chugins_here\AmbiMath.chug\include\chugin.h(1007,8):
+      see declaration of 'a_Stmt_'
+  
+C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(423,32): error C3646: 'cb': unknown override specifier
+  (compiling source file 'src/AmbiMath.cpp')
+  
+C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(423,5): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'src/AmbiMath.cpp')
+  
+C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(428,45): error C2061: syntax error: identifier 'f_callback_on_srate_update'
+  (compiling source file 'src/AmbiMath.cpp')
+  
+C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(429,10): error C2065: 'f': undeclared identifier
+  (compiling source file 'src/AmbiMath.cpp')
+  
+C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(429,23): error C2065: 'data': undeclared identifier
+  (compiling source file 'src/AmbiMath.cpp')
+  
+C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(429,7): error C2614: 'Chuck_VM_Callback_On_SampleRate_Update': illegal member initialization: 'cb' is not a base or member
+  (compiling source file 'src/AmbiMath.cpp')
+  
+C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(433,16): error C2039: 'cb': is not a member of 'Chuck_VM_Callback_On_SampleRate_Update'
+  (compiling source file 'src/AmbiMath.cpp')
+      C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(420,8):
+      see declaration of 'Chuck_VM_Callback_On_SampleRate_Update'
+  
+C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(433,7): error C2614: 'Chuck_VM_Callback_On_SampleRate_Update': illegal member initialization: 'cb' is not a base or member
+  (compiling source file 'src/AmbiMath.cpp')
+  
+C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(437,20): error C2039: 'cb': is not a member of 'Chuck_VM_Callback_On_SampleRate_Update'
+  (compiling source file 'src/AmbiMath.cpp')
+      C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(420,8):
+      see declaration of 'Chuck_VM_Callback_On_SampleRate_Update'
+  
+C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(437,32): error C2039: 'cb': is not a member of 'Chuck_VM_Callback_On_SampleRate_Update'
+  (compiling source file 'src/AmbiMath.cpp')
+      C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(420,8):
+      see declaration of 'Chuck_VM_Callback_On_SampleRate_Update'
+  
+C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(723,45): error C2061: syntax error: identifier 'f_callback_on_srate_update'
+  (compiling source file 'src/AmbiMath.cpp')
+  
+C:\Users\carpe\Documents\build_chugins_here\ambiMath.chug\src\AmbiMath.cpp(313,28): error C2065: 'coordinates': undeclared identifier
+C:\Users\carpe\Documents\build_chugins_here\ambiMath.chug\src\AmbiMath.cpp(509,51): error C2661: 'Chuck_ArrayFloat::Chuck_ArrayFloat': no overloaded function takes 2 arguments
+      C:\Users\carpe\Documents\build_chugins_here\ambiMath.chug\src\AmbiMath.cpp(509,51):
+      while trying to match the argument list '(int, __int64)'
+  

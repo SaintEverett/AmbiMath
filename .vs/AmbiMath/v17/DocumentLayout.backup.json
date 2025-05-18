@@ -5,6 +5,9 @@
     {
       "AbsoluteMoniker": "D:0:0:{32B00A7B-FFF6-2ABC-55E4-9C8F61E1BCEC}|AmbiMath.vcxproj|C:\\Users\\carpe\\Documents\\build_chugins_here\\ambiMath.chug\\src\\AmbiMath.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{32B00A7B-FFF6-2ABC-55E4-9C8F61E1BCEC}|AmbiMath.vcxproj|solutionrelative:src\\AmbiMath.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\carpe\\Documents\\GitHub\\chuck\\src\\core\\chuck_vm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -13,9 +16,21 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 347,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "chuck_vm.h",
+              "DocumentMoniker": "C:\\Users\\carpe\\Documents\\GitHub\\chuck\\src\\core\\chuck_vm.h",
+              "RelativeDocumentMoniker": "..\\..\\GitHub\\chuck\\src\\core\\chuck_vm.h",
+              "ToolTip": "C:\\Users\\carpe\\Documents\\GitHub\\chuck\\src\\core\\chuck_vm.h",
+              "RelativeToolTip": "..\\..\\GitHub\\chuck\\src\\core\\chuck_vm.h",
+              "ViewState": "AgIAAB8BAAAAAAAAAAAewLEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-18T22:56:20.9Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,9 +39,9 @@
               "RelativeDocumentMoniker": "src\\AmbiMath.cpp",
               "ToolTip": "C:\\Users\\carpe\\Documents\\build_chugins_here\\AmbiMath.chug\\src\\AmbiMath.cpp",
               "RelativeToolTip": "src\\AmbiMath.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAwwBYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-18T21:01:27.484Z",
+              "WhenOpened": "2025-05-18T22:53:48.118Z",
               "EditorCaption": ""
             }
           ]

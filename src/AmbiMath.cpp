@@ -12,16 +12,21 @@
 //
 //-----------------------------------------------------------------------------
 
-// include chugin header
+// include chuck headers
 #include "chugin.h"
+#include "chuck_compile.h"
+#include "chuck_type.h"
+#include "chuck_instr.h"
+#include "chuck_oo.h"
+#include "chuck.h"
 
 // general includes
-#include <iostream>
+#include "AmbiMath.h"
 #include <float.h>
-#include <stdlib.h>
+#include <iostream>
 #include <limits.h>
 #include <math.h>
-#include "AmbiMath.h"
+#include <stdlib.h>
 
 static int w_constant = 1;
 static double g_pi = CK_ONE_PI;
@@ -41,9 +46,86 @@ CK_DLL_TICK( ambimath_tick );
 // this is a special offset reserved for chugin internal data
 t_CKINT ambimath_data_offset = 0;
 
+// convert degrees to radians
 float degreeRad(float degree)
 {
     return (g_pi / 180) * degree;
+}
+// ambisonic maths
+float x(float direction, float elevation)
+{
+    double x = (cos(degreeRad(direction)) * cos(degreeRad(elevation)));
+    return x;
+}
+float y(float direction, float elevation)
+{
+    double y = ((sin(degreeRad(direction))) * (cos(degreeRad(elevation))));
+    return y;
+}
+float z(float direction, float elevation)
+{
+    double z = (sin(degreeRad(elevation)));
+    return z;
+}
+float r(float direction, float elevation)
+{
+    double r = (0.5 * (3 * (pow((sin(degreeRad(elevation))), 2)) - 1));
+    return r;
+}
+float s(float direction, float elevation)
+{
+    double s = (0.8660254038 * (cos(degreeRad(direction))) * (sin((2 * degreeRad(elevation)))));
+    return s;
+}
+float t(float direction, float elevation)
+{
+    double t = (0.8660254038 * (sin(degreeRad(direction))) * (sin((2 * degreeRad(elevation)))));
+    return t;
+}
+float u(float direction, float elevation)
+{
+    double u = (0.8660254038 * cos(2 * degreeRad(direction)) * pow(cos(degreeRad(elevation)), 2));
+    return u;
+}
+float v(float direction, float elevation)
+{
+    double v = (0.8660254038 * sin(2 * degreeRad(direction)) * pow(cos(degreeRad(elevation)), 2));
+    return v;
+}
+float l(float direction, float elevation)
+{
+    double l = (0.6123724357 * cos(degreeRad(direction)) * cos(degreeRad(elevation)) * (5 * pow(sin(degreeRad(elevation)), 2) - 1));
+    return l;
+}
+float m(float direction, float elevation)
+{
+    double m = (0.6123724357 * sin(degreeRad(direction)) * cos(degreeRad(elevation)) * (5 * pow(sin(degreeRad(elevation)), 2) - 1));
+    return m;
+}
+float o(float direction, float elevation)
+{
+    double o = (1.936491673 * sin(2 * degreeRad(direction)) * sin(degreeRad(elevation)) * pow(cos(degreeRad(elevation)), 2));
+    return o;
+}
+float n(float direction, float elevation)
+{
+    double n = (1.936491673 * cos(2 * degreeRad(direction)) * sin(degreeRad(elevation)) * pow(cos(degreeRad(elevation)), 2));
+    return n;
+}
+float p(float direction, float elevation)
+{
+    double p = (0.790569415 * cos(3 * degreeRad(direction)) * pow(cos(degreeRad(elevation)), 3));
+    return p;
+}
+float q(float direction, float elevation)
+{
+    double q = (0.790569415 * sin(3 * degreeRad(direction)) * pow(cos(degreeRad(elevation)), 3));
+    return q;
+}
+float k(float direction, float elevation)
+{
+    double k = (0.5 * sin(degreeRad(elevation)) * (5 * pow(sin(degreeRad(elevation)), 2) - 3));
+    return k;
 }
 
 //-----------------------------------------------------------------------------
@@ -228,12 +310,11 @@ CK_DLL_QUERY( AmbiMath )
     QUERY->doc_func(QUERY, "Computes cartesian K coordinate given elevation and direction angles");
 
     // all coordinates
-    QUERY->add_sfun(QUERY, coordinates, "float", "all");
+    QUERY->add_sfun(QUERY, coordinates, "float[]", "all");
     QUERY->add_arg(QUERY, "float", "direction");
     QUERY->add_arg(QUERY, "float", "elevation");
-    QUERY->add_arg(QUERY, "float", "array[]");
     QUERY->add_arg(QUERY, "int", "order");
-    QUERY->doc_func(QUERY, "Computes all coordinates of a given order and stores them in a provided array");
+    QUERY->doc_func(QUERY, "Computes all coordinates of a given order and returns an array of the corresponding size. Order of coordinates is X,Y,Z,W,V,T,R,S,U,Q,O,M,K,L,N,O.");
 
     // create and set w constant
     QUERY->add_svar(QUERY, "float", "w", TRUE, &w_constant);
@@ -316,134 +397,149 @@ CK_DLL_SFUN(x_Coordinate)
 {
     float direction = GET_NEXT_FLOAT(ARGS);
     float elevation = GET_NEXT_FLOAT(ARGS);
-    double x = (cos(degreeRad(direction)) * cos(degreeRad(elevation)));
-    RETURN->v_float = x;
+    RETURN->v_float = x(direction,elevation);
 }
 
 CK_DLL_SFUN(y_Coordinate)
 {
     float direction = GET_NEXT_FLOAT(ARGS);
     float elevation = GET_NEXT_FLOAT(ARGS);
-    double y = ((sin(degreeRad(direction))) * (cos(degreeRad(elevation))));
-    RETURN->v_float = y;
+    RETURN->v_float = y(direction, elevation);
 }
 
 CK_DLL_SFUN(z_Coordinate)
 {
     float direction = GET_NEXT_FLOAT(ARGS);
     float elevation = GET_NEXT_FLOAT(ARGS);
-    double z = (sin(degreeRad(elevation)));
-    RETURN->v_float = z;
+    RETURN->v_float = z(direction, elevation);
 }
 
 CK_DLL_SFUN(r_Coordinate)
 {
     float direction = GET_NEXT_FLOAT(ARGS);
     float elevation = GET_NEXT_FLOAT(ARGS);
-    double r = (0.5 * (3 * (pow((sin(degreeRad(elevation))), 2)) - 1));
-    RETURN->v_float = r;
+    RETURN->v_float = r(direction, elevation);
 }
 
 CK_DLL_SFUN(s_Coordinate)
 {
     float direction = GET_NEXT_FLOAT(ARGS);
     float elevation = GET_NEXT_FLOAT(ARGS);
-    double s = (0.8660254038 * (cos(degreeRad(direction))) * (sin((2 * degreeRad(elevation)))));
-    RETURN->v_float = s;
+    RETURN->v_float = s(direction, elevation);
 }
 
 CK_DLL_SFUN(t_Coordinate)
 {
     float direction = GET_NEXT_FLOAT(ARGS);
     float elevation = GET_NEXT_FLOAT(ARGS);
-    double t = (0.8660254038 * (sin(degreeRad(direction))) * (sin((2 * degreeRad(elevation)))));
-    RETURN->v_float = t;
+    RETURN->v_float = t(direction, elevation);
 }
 
 CK_DLL_SFUN(u_Coordinate)
 {
     float direction = GET_NEXT_FLOAT(ARGS);
     float elevation = GET_NEXT_FLOAT(ARGS);
-    double u = (0.8660254038 * cos(2 * degreeRad(direction)) * pow(cos(degreeRad(elevation)), 2));
-    RETURN->v_float = u;
+    RETURN->v_float = u(direction, elevation);
 }
 
 CK_DLL_SFUN(v_Coordinate)
 {
     float direction = GET_NEXT_FLOAT(ARGS);
     float elevation = GET_NEXT_FLOAT(ARGS);
-    double v = (0.8660254038 * sin(2 * degreeRad(direction)) * pow(cos(degreeRad(elevation)), 2));
-    RETURN->v_float = v;
+    RETURN->v_float = v(direction, elevation);
 }
 
 CK_DLL_SFUN(l_Coordinate)
 {
     float direction = GET_NEXT_FLOAT(ARGS);
     float elevation = GET_NEXT_FLOAT(ARGS);
-    double l = (0.6123724357 * cos(degreeRad(direction)) * cos(degreeRad(elevation)) * (5 * pow(sin(degreeRad(elevation)), 2) - 1));
-    RETURN->v_float = l;
+    RETURN->v_float = l(direction, elevation);
 }
 
 CK_DLL_SFUN(m_Coordinate)
 {
     float direction = GET_NEXT_FLOAT(ARGS);
     float elevation = GET_NEXT_FLOAT(ARGS);
-    double m = (0.6123724357 * sin(degreeRad(direction)) * cos(degreeRad(elevation)) * (5 * pow(sin(degreeRad(elevation)), 2) - 1));
-    RETURN->v_float = m;
+    RETURN->v_float = m(direction, elevation);
 }
 
 CK_DLL_SFUN(o_Coordinate)
 {
     float direction = GET_NEXT_FLOAT(ARGS);
     float elevation = GET_NEXT_FLOAT(ARGS);
-    double o = (1.936491673 * sin(2 * degreeRad(direction)) * sin(degreeRad(elevation)) * pow(cos(degreeRad(elevation)), 2));
-    RETURN->v_float = o;
+    RETURN->v_float = o(direction, elevation);
 }
 
 CK_DLL_SFUN(n_Coordinate)
 {
     float direction = GET_NEXT_FLOAT(ARGS);
     float elevation = GET_NEXT_FLOAT(ARGS);
-    double n = (1.936491673 * cos(2 * degreeRad(direction)) * sin(degreeRad(elevation)) * pow(cos(degreeRad(elevation)), 2));
-    RETURN->v_float = n;
+    RETURN->v_float = n(direction, elevation);
 }
 
 CK_DLL_SFUN(p_Coordinate)
 {
     float direction = GET_NEXT_FLOAT(ARGS);
     float elevation = GET_NEXT_FLOAT(ARGS);
-    double p = (0.790569415 * cos(3 * degreeRad(direction)) * pow(cos(degreeRad(elevation)), 3));
-    RETURN->v_float = p;
+    RETURN->v_float = p(direction, elevation);
 }
 
 CK_DLL_SFUN(q_Coordinate)
 {
     float direction = GET_NEXT_FLOAT(ARGS);
     float elevation = GET_NEXT_FLOAT(ARGS);
-    double q = (0.790569415 * sin(3 * degreeRad(direction)) * pow(cos(degreeRad(elevation)), 3));
-    RETURN->v_float = q;
+    RETURN->v_float = q(direction, elevation);
 }
 
 CK_DLL_SFUN(k_Coordinate)
 {
     float direction = GET_NEXT_FLOAT(ARGS);
     float elevation = GET_NEXT_FLOAT(ARGS);
-    double k = (0.5 * sin(degreeRad(elevation)) * (5 * pow(sin(degreeRad(elevation)), 2) - 3));
-    RETURN->v_float = k;
+    RETURN->v_float = k(direction, elevation);
+}
+
+static Chuck_ArrayFloat* coord_array(float direction, float elevation, int order, Chuck_VM_Shred* SHRED)
+{
+    // size
+    t_CKINT size = 0;
+    // calculate size based on order
+    size = ::pow((order+1),2);
+
+    // allocate array object
+    Chuck_ArrayFloat* range = new Chuck_ArrayFloat(FALSE, size);
+    // initialize with trappings of Object
+    initialize_object(range, SHRED->vm_ref->env()->ckt_array, SHRED, SHRED->vm_ref);
+    
+    double value;
+    // populate the array
+    for (t_CKINT i = 0; i < size; i++) 
+    {
+        if (i == 0) value = x(direction, elevation); // there's gotta be a better way to do this
+        if (i == 1) value = y(direction, elevation);
+        if (i == 2) value = z(direction, elevation);
+        if (i == 3) value = w_constant;
+        if (i == 4) value = v(direction, elevation);
+        if (i == 5) value = t(direction, elevation);
+        if (i == 6) value = r(direction, elevation);
+        if (i == 7) value = s(direction, elevation);
+        if (i == 8) value = u(direction, elevation);
+        if (i == 9) value = q(direction, elevation);
+        if (i == 10) value = o(direction, elevation);
+        if (i == 11) value = m(direction, elevation);
+        if (i == 12) value = k(direction, elevation);
+        if (i == 13) value = l(direction, elevation);
+        if (i == 14) value = n(direction, elevation);
+        if (i == 15) value = p(direction, elevation);
+        range->set(i, value);
+    }
+    // return the array reference
+    return range;
 }
 
 CK_DLL_SFUN(coordinates)
 {
-    Chuck_ArrayFloat * array = (Chuck_ArrayFloat *)GET_NEXT_OBJECT(ARGS);
-    t_CKINT size = 0;
-
-    // in case of error
-    RETURN->v_float = 0.0;
-
-    // if null error
-    if (array == NULL)
-    {
-        EM_log(CK_LOG_WARNING, "AmbiMath.all(...) recieved one or more null arrays");
-        return;
-    }
+    float direction = GET_NEXT_FLOAT(ARGS);
+    float elevation = GET_NEXT_FLOAT(ARGS);
+    int order = GET_NEXT_INT(ARGS);
+    RETURN->v_object;
 }
