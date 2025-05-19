@@ -8,7 +8,7 @@
 *.vsidx
 
 # Ignore this .vs folder
-.vs/**
+/.vs/**
 
 # Compiled Object files
 *.slo
