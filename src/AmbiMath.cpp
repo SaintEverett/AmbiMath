@@ -14,15 +14,17 @@
 
 // include chuck headers
 #include "chugin.h"
-#include "ulib_std.h"
-#include "util_buffers.h"
-#include "util_math.h"
-#include "util_string.h"
-#include "util_platforms.h"
-#include "chuck.h"
-#include "chuck_type.h"
+
+//#include "ulib_std.h"
+//#include "util_buffers.h"
+//#include "util_math.h"
+//#include "util_string.h"
+//#include "util_platforms.h"
+//#include "chuck.h"
+//#include "chuck_type.h"
 #include "chuck_compile.h"
 #include "chuck_instr.h"
+
 
 // general includes
 #include "AmbiMath.h"
@@ -518,7 +520,7 @@ static Chuck_ArrayFloat* coord_array(float direction, float elevation, int order
     size = ::pow((order+1),2);
 
     // allocate array object
-    Chuck_ArrayFloat* range = new Chuck_ArrayFloat(FALSE, size);
+    Chuck_ArrayFloat* range = new Chuck_ArrayFloat(size);
     // initialize with trappings of Object
     initialize_object(range, SHRED->vm_ref->env()->ckt_array, SHRED, SHRED->vm_ref);
     
