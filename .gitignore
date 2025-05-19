@@ -8,11 +8,7 @@
 *.vsidx
 
 # Ignore this .vs folder
-/.vs
-/.vs/AmbiMath
-/.vs/AmbiMath/FileContentIndex
-/.vs/AmbiMath/v17/ipch
-/.vs/AmbiMath/v17/ipch/AutoPCH
+.vs/**
 
 # Compiled Object files
 *.slo
