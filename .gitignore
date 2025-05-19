@@ -9,6 +9,10 @@
 
 # Ignore this .vs folder
 /.vs
+/.vs/AmbiMath
+/.vs/AmbiMath/FileContentIndex
+/.vs/AmbiMath/v17/ipch
+/.vs/AmbiMath/v17/ipch/AutoPCH
 
 # Compiled Object files
 *.slo
@@ -39,4 +43,3 @@
 *.exe
 *.out
 *.app
-/.vs/AmbiMath
