@@ -14,11 +14,15 @@
 
 // include chuck headers
 #include "chugin.h"
-//#include "chuck_compile.h"
-//#include "chuck_type.h"
-#include "chuck_instr.h"
-//#include "chuck_oo.h"
+#include "ulib_std.h"
+#include "util_buffers.h"
+#include "util_math.h"
+#include "util_string.h"
+#include "util_platforms.h"
 #include "chuck.h"
+#include "chuck_type.h"
+#include "chuck_compile.h"
+#include "chuck_instr.h"
 
 // general includes
 #include "AmbiMath.h"
