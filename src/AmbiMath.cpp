@@ -14,10 +14,10 @@
 
 // include chuck headers
 #include "chugin.h"
-#include "chuck_compile.h"
-#include "chuck_type.h"
+//#include "chuck_compile.h"
+//#include "chuck_type.h"
 #include "chuck_instr.h"
-#include "chuck_oo.h"
+//#include "chuck_oo.h"
 #include "chuck.h"
 
 // general includes
@@ -498,6 +498,14 @@ CK_DLL_SFUN(k_Coordinate)
     RETURN->v_float = k(direction, elevation);
 }
 
+CK_DLL_SFUN(coordinates)
+{
+    float direction = GET_NEXT_FLOAT(ARGS);
+    float elevation = GET_NEXT_FLOAT(ARGS);
+    int order = GET_NEXT_INT(ARGS);
+    RETURN->v_object;
+}
+
 static Chuck_ArrayFloat* coord_array(float direction, float elevation, int order, Chuck_VM_Shred* SHRED)
 {
     // size
@@ -534,12 +542,4 @@ static Chuck_ArrayFloat* coord_array(float direction, float elevation, int order
     }
     // return the array reference
     return range;
-}
-
-CK_DLL_SFUN(coordinates)
-{
-    float direction = GET_NEXT_FLOAT(ARGS);
-    float elevation = GET_NEXT_FLOAT(ARGS);
-    int order = GET_NEXT_INT(ARGS);
-    RETURN->v_object;
 }
