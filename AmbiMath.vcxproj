@@ -105,6 +105,9 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;AMBIMATH_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\carpe\Documents\build_chugins_here\AmbiMath.chug\include</AdditionalIncludeDirectories>
+      <ScanSourceForModuleDependencies>true</ScanSourceForModuleDependencies>
+      <ShowIncludes>true</ShowIncludes>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -157,13 +160,44 @@
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\AmbiMath.cpp" />
+    <ClCompile Include="src\AmbiMath.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\carpe\Documents\GitHub\chuck\src\core;C:\Users\carpe\Documents\build_chugins_here\AmbiMath.chug\include </AdditionalIncludeDirectories>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\AmbiMath.h" />
-    <ClInclude Include="include\chuck_compile.h" />
-    <ClInclude Include="include\chuck_type.h" />
+    <ClInclude Include="include\chuck.h" />
+    <ClInclude Include="include\chuck_instr.h" />
     <ClInclude Include="include\chugin.h" />
+    <ClInclude Include="include\dirent_win32.h" />
+    <ClInclude Include="include\hidio_sdl.h" />
+    <ClInclude Include="include\midiio_rtmidi.h" />
+    <ClInclude Include="include\rtmidi.h" />
+    <ClInclude Include="include\uana_extract.h" />
+    <ClInclude Include="include\uana_xform.h" />
+    <ClInclude Include="include\ugen_filter.h" />
+    <ClInclude Include="include\ugen_osc.h" />
+    <ClInclude Include="include\ugen_stk.h" />
+    <ClInclude Include="include\ugen_xxx.h" />
+    <ClInclude Include="include\ulib_ai.h" />
+    <ClInclude Include="include\ulib_doc.h" />
+    <ClInclude Include="include\ulib_machine.h" />
+    <ClInclude Include="include\ulib_math.h" />
+    <ClInclude Include="include\ulib_opsc.h" />
+    <ClInclude Include="include\ulib_std.h" />
+    <ClInclude Include="include\util_buffers.h" />
+    <ClInclude Include="include\util_console.h" />
+    <ClInclude Include="include\util_hid.h" />
+    <ClInclude Include="include\util_math.h" />
+    <ClInclude Include="include\util_network.h" />
+    <ClInclude Include="include\util_opsc.h" />
+    <ClInclude Include="include\util_platforms.h" />
+    <ClInclude Include="include\util_raw.h" />
+    <ClInclude Include="include\util_serial.h" />
+    <ClInclude Include="include\util_sndfile.h" />
+    <ClInclude Include="include\util_string.h" />
+    <ClInclude Include="include\util_thread.h" />
+    <ClInclude Include="include\util_xforms.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="AmbiMath\x64\Debug\AmbiMath.Build.CppClean.log" />

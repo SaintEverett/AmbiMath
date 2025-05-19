@@ -15,17 +15,6 @@
 // include chuck headers
 #include "chugin.h"
 
-//#include "ulib_std.h"
-//#include "util_buffers.h"
-//#include "util_math.h"
-//#include "util_string.h"
-//#include "util_platforms.h"
-//#include "chuck.h"
-//#include "chuck_type.h"
-#include "chuck_compile.h"
-#include "chuck_instr.h"
-
-
 // general includes
 #include "AmbiMath.h"
 #include <float.h>
@@ -316,7 +305,7 @@ CK_DLL_QUERY( AmbiMath )
     QUERY->doc_func(QUERY, "Computes cartesian K coordinate given elevation and direction angles");
 
     // all coordinates
-    QUERY->add_sfun(QUERY, coordinates, "float[]", "all");
+    QUERY->add_sfun(QUERY, all, "float[]", "all");
     QUERY->add_arg(QUERY, "float", "direction");
     QUERY->add_arg(QUERY, "float", "elevation");
     QUERY->add_arg(QUERY, "int", "order");
@@ -397,6 +386,14 @@ CK_DLL_MFUN(ambimath_getParam)
 
     // call getParam() and set the return value
     RETURN->v_float = am_obj->getParam();
+}
+
+CK_DLL_SFUN(all)
+{
+    float direction = GET_NEXT_FLOAT(ARGS);
+    float elevation = GET_NEXT_FLOAT(ARGS);
+    int order = GET_NEXT_INT(ARGS);
+    RETURN->v_float;
 }
 
 CK_DLL_SFUN(x_Coordinate)
@@ -502,50 +499,4 @@ CK_DLL_SFUN(k_Coordinate)
     float direction = GET_NEXT_FLOAT(ARGS);
     float elevation = GET_NEXT_FLOAT(ARGS);
     RETURN->v_float = k(direction, elevation);
-}
-
-CK_DLL_SFUN(coordinates)
-{
-    float direction = GET_NEXT_FLOAT(ARGS);
-    float elevation = GET_NEXT_FLOAT(ARGS);
-    int order = GET_NEXT_INT(ARGS);
-    RETURN->v_object;
-}
-
-static Chuck_ArrayFloat* coord_array(float direction, float elevation, int order, Chuck_VM_Shred* SHRED)
-{
-    // size
-    t_CKINT size = 0;
-    // calculate size based on order
-    size = ::pow((order+1),2);
-
-    // allocate array object
-    Chuck_ArrayFloat* range = new Chuck_ArrayFloat(size);
-    // initialize with trappings of Object
-    initialize_object(range, SHRED->vm_ref->env()->ckt_array, SHRED, SHRED->vm_ref);
-    
-    double value;
-    // populate the array
-    for (t_CKINT i = 0; i < size; i++) 
-    {
-        if (i == 0) value = x(direction, elevation); // there's gotta be a better way to do this
-        if (i == 1) value = y(direction, elevation);
-        if (i == 2) value = z(direction, elevation);
-        if (i == 3) value = w_constant;
-        if (i == 4) value = v(direction, elevation);
-        if (i == 5) value = t(direction, elevation);
-        if (i == 6) value = r(direction, elevation);
-        if (i == 7) value = s(direction, elevation);
-        if (i == 8) value = u(direction, elevation);
-        if (i == 9) value = q(direction, elevation);
-        if (i == 10) value = o(direction, elevation);
-        if (i == 11) value = m(direction, elevation);
-        if (i == 12) value = k(direction, elevation);
-        if (i == 13) value = l(direction, elevation);
-        if (i == 14) value = n(direction, elevation);
-        if (i == 15) value = p(direction, elevation);
-        range->set(i, value);
-    }
-    // return the array reference
-    return range;
 }

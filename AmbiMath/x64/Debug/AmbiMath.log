@@ -1,59 +1,119 @@
 ﻿  AmbiMath.cpp
-C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_type.h(406,16): error C3646: 'stmt_doc': unknown override specifier
-  (compiling source file 'src/AmbiMath.cpp')
-  
-C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_type.h(406,5): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-  (compiling source file 'src/AmbiMath.cpp')
-  
-C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_type.h(427,28): error C2065: 'stmt_doc': undeclared identifier
-  (compiling source file 'src/AmbiMath.cpp')
-  
-C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_type.h(799,80): error C2039: 'hasStaticDecl': is not a member of 'a_Stmt_'
-  (compiling source file 'src/AmbiMath.cpp')
-      C:\Users\carpe\Documents\build_chugins_here\AmbiMath.chug\include\chugin.h(1007,8):
-      see declaration of 'a_Stmt_'
-  
-C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(423,32): error C3646: 'cb': unknown override specifier
-  (compiling source file 'src/AmbiMath.cpp')
-  
-C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(423,5): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-  (compiling source file 'src/AmbiMath.cpp')
-  
-C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(428,45): error C2061: syntax error: identifier 'f_callback_on_srate_update'
-  (compiling source file 'src/AmbiMath.cpp')
-  
-C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(429,10): error C2065: 'f': undeclared identifier
-  (compiling source file 'src/AmbiMath.cpp')
-  
-C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(429,23): error C2065: 'data': undeclared identifier
-  (compiling source file 'src/AmbiMath.cpp')
-  
-C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(429,7): error C2614: 'Chuck_VM_Callback_On_SampleRate_Update': illegal member initialization: 'cb' is not a base or member
-  (compiling source file 'src/AmbiMath.cpp')
-  
-C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(433,16): error C2039: 'cb': is not a member of 'Chuck_VM_Callback_On_SampleRate_Update'
-  (compiling source file 'src/AmbiMath.cpp')
-      C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(420,8):
-      see declaration of 'Chuck_VM_Callback_On_SampleRate_Update'
-  
-C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(433,7): error C2614: 'Chuck_VM_Callback_On_SampleRate_Update': illegal member initialization: 'cb' is not a base or member
-  (compiling source file 'src/AmbiMath.cpp')
-  
-C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(437,20): error C2039: 'cb': is not a member of 'Chuck_VM_Callback_On_SampleRate_Update'
-  (compiling source file 'src/AmbiMath.cpp')
-      C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(420,8):
-      see declaration of 'Chuck_VM_Callback_On_SampleRate_Update'
-  
-C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(437,32): error C2039: 'cb': is not a member of 'Chuck_VM_Callback_On_SampleRate_Update'
-  (compiling source file 'src/AmbiMath.cpp')
-      C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(420,8):
-      see declaration of 'Chuck_VM_Callback_On_SampleRate_Update'
-  
-C:\Users\carpe\Documents\GitHub\chuck\src\core\chuck_vm.h(723,45): error C2061: syntax error: identifier 'f_callback_on_srate_update'
-  (compiling source file 'src/AmbiMath.cpp')
-  
-C:\Users\carpe\Documents\build_chugins_here\ambiMath.chug\src\AmbiMath.cpp(313,28): error C2065: 'coordinates': undeclared identifier
-C:\Users\carpe\Documents\build_chugins_here\ambiMath.chug\src\AmbiMath.cpp(509,51): error C2661: 'Chuck_ArrayFloat::Chuck_ArrayFloat': no overloaded function takes 2 arguments
-      C:\Users\carpe\Documents\build_chugins_here\ambiMath.chug\src\AmbiMath.cpp(509,51):
-      while trying to match the argument list '(int, __int64)'
-  
+  Note: including file: C:\Users\carpe\Documents\build_chugins_here\AmbiMath.chug\include\chugin.h
+  Note: including file:  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdlib.h
+  Note: including file:   C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt.h
+  Note: including file:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime.h
+  Note: including file:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\sal.h
+  Note: including file:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\concurrencysal.h
+  Note: including file:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vadefs.h
+  Note: including file:   C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_malloc.h
+  Note: including file:   C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_search.h
+  Note: including file:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stddef.h
+  Note: including file:   C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_wstdlib.h
+  Note: including file:   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\limits.h
+  Note: including file:  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\memory.h
+  Note: including file:   C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_memory.h
+  Note: including file:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_memcpy_s.h
+  Note: including file:     C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\errno.h
+  Note: including file:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_string.h
+  Note: including file:  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\assert.h
+  Note: including file:  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdint.h
+  Note: including file:  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\string
+  Note: including file:   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\yvals_core.h
+  Note: including file:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xkeycheck.h
+  Note: including file:   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xstring
+  Note: including file:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_sanitizer_annotate_container.hpp
+  Note: including file:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_string_view.hpp
+  Note: including file:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iosfwd
+  Note: including file:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\yvals.h
+  Note: including file:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\crtdbg.h
+  Note: including file:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_new_debug.h
+  Note: including file:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_new.h
+  Note: including file:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\crtdefs.h
+  Note: including file:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\use_ansi.h
+  Note: including file:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdio
+  Note: including file:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h
+  Note: including file:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_wstdio.h
+  Note: including file:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_stdio_config.h
+  Note: including file:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstring
+  Note: including file:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\string.h
+  Note: including file:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_wstring.h
+  Note: including file:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cwchar
+  Note: including file:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\wchar.h
+  Note: including file:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_wconio.h
+  Note: including file:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_wctype.h
+  Note: including file:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_wdirect.h
+  Note: including file:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_wio.h
+  Note: including file:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_share.h
+  Note: including file:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_wprocess.h
+  Note: including file:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_wtime.h
+  Note: including file:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\sys/stat.h
+  Note: including file:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\sys/types.h
+  Note: including file:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xtr1common
+  Note: including file:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xutility
+  Note: including file:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_iter_core.hpp
+  Note: including file:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility
+  Note: including file:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\initializer_list
+  Note: including file:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstddef
+  Note: including file:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\type_traits
+  Note: including file:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdint
+  Note: including file:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\climits
+  Note: including file:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdlib
+  Note: including file:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\math.h
+  Note: including file:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h
+  Note: including file:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmemory
+  Note: including file:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\limits
+  Note: including file:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cfloat
+  Note: including file:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\float.h
+  Note: including file:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin0.h
+  Note: including file:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin0.inl.h
+  Note: including file:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\new
+  Note: including file:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\exception
+  Note: including file:       C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\malloc.h
+  Note: including file:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_exception.h
+  Note: including file:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\eh.h
+  Note: including file:         C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_terminate.h
+  Note: including file:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xatomic.h
+  Note: including file:   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cctype
+  Note: including file:    C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\ctype.h
+  Note: including file:  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vector
+  Note: including file:   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_bit_utils.hpp
+  Note: including file:  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\map
+  Note: including file:   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\tuple
+  Note: including file:   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xtree
+  Note: including file: C:\Users\carpe\Documents\build_chugins_here\AmbiMath.chug\include\AmbiMath.h
+  Note: including file:  C:\Users\carpe\Documents\build_chugins_here\AmbiMath.chug\include\chugin.h
+  Note: including file: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iostream
+  Note: including file:  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\istream
+  Note: including file:   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_ostream.hpp
+  Note: including file:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ios
+  Note: including file:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocnum
+  Note: including file:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cmath
+  Note: including file:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iterator
+  Note: including file:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\streambuf
+  Note: including file:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xiosbase
+  Note: including file:        C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\share.h
+  Note: including file:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\system_error
+  Note: including file:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_system_error_abi.hpp
+  Note: including file:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cerrno
+  Note: including file:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdexcept
+  Note: including file:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xcall_once.h
+  Note: including file:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xerrc.h
+  Note: including file:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\atomic
+  Note: including file:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xthreads.h
+  Note: including file:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_threads_core.hpp
+  Note: including file:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xtimec.h
+  Note: including file:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ctime
+  Note: including file:             C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\time.h
+  Note: including file:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocale
+  Note: including file:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\memory
+  Note: including file:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\typeinfo
+  Note: including file:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_typeinfo.h
+  Note: including file:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xfacet
+  Note: including file:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocinfo
+  Note: including file:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_xlocinfo_types.hpp
+  Note: including file:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\clocale
+  Note: including file:           C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\locale.h
+  Note: including file:  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ostream
+  Note: including file: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\math.h
+C:\Users\carpe\Documents\build_chugins_here\ambiMath.chug\src\AmbiMath.cpp(308,28): error C2065: 'all': undeclared identifier

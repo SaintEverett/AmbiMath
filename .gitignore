@@ -1,6 +1,15 @@
 # Prerequisites
 *.d
 
+# VS files
+*.vcxproj
+*.vcxproj.user
+*.sln
+*.vsidx
+
+# Ignore this .vs folder
+/.vs
+
 # Compiled Object files
 *.slo
 *.lo
@@ -30,3 +39,4 @@
 *.exe
 *.out
 *.app
+
